@@ -1,3 +1,4 @@
+
 #count serve para saber a quantidade de registros
 
 SELECT count(id) FROM carros;
@@ -36,6 +37,14 @@ ORDER BY preco ASC;
 
 #Apresentar a data formatada
 SELECT modelo, DATE_FORMAT(data_fabricacao,'%d/%m/%y') AS 'Data de Fabricação'
+FROM carros
+WHERE data_fabricacao IS NOT NULL;
+--------
+
+
+SELECT modelo, DATE_FORMAT(data_fabricacao,'%d/%m/%y') AS 'Data de Fabricação'
+
+
 FROM carros
 WHERE data_fabricacao IS NOT NULL;
 
@@ -82,14 +91,22 @@ LIMIT 2, 2;
 # 3ª página
 SELECT * FROM alimentos
 LIMIT 4, 2;
+------------------------------------
+select * from pokemon;
+
+select * from pokemon 
+where ataque >2;
+
+select * from pokemon
+where nome like 'C%';
+
+select * from pokemon
+where nome like '%d%';
+
+select max(ataque) from pokemon;
 
 
 
 
 
 
-
-
-
-
-    
